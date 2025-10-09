@@ -104,6 +104,7 @@ body {
 
 .nav-item {
     margin-bottom: var(--spacing-xs);
+    position: relative;
 }
 
 .nav-link {
@@ -114,6 +115,7 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
+    position: relative;
 }
 
 .nav-link:hover {
@@ -130,6 +132,49 @@ body {
     margin-right: var(--spacing-md);
     width: 20px;
     text-align: center;
+}
+
+/* 子菜单箭头 */
+.submenu-arrow {
+    margin-left: auto;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-item.has-submenu.open .submenu-arrow {
+    transform: rotate(180deg);
+}
+
+/* 子菜单样式 */
+.submenu {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.nav-item.has-submenu.open .submenu {
+    max-height: 500px;
+}
+
+.submenu .nav-link {
+    padding-left: calc(var(--spacing-lg) + 20px);
+    font-size: 0.9rem;
+    border-left: none;
+}
+
+.submenu .submenu .nav-link {
+    padding-left: calc(var(--spacing-lg) + 40px);
+}
+
+.submenu .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.submenu .nav-link.active {
+    background-color: var(--primary-color);
+    border-left: 3px solid var(--primary-light);
 }
 
 /* 主内容区域 */

@@ -85,7 +85,6 @@ const PORT = 3000;
 const server = http.createServer((req, res) => {
   // 处理 /admin 路由
   if (req.url === '/admin' || req.url === '/admin/') {
-    filePath = './admin.html';
     res.writeHead(200, { 'Content-Type': 'text/html' });
     fs.readFile('./admin.html', 'utf8', (err, content) => {
       if (err) {

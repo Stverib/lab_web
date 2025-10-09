@@ -88,6 +88,36 @@ function handleNavClick(event) {
     
     const clickedLink = event.currentTarget;
     const targetSection = clickedLink.getAttribute('data-section');
+    const navItem = clickedLink.closest('.nav-item');
+    
+    // 如果是有子菜单的项目，切换展开状态
+    if (navItem.classList.contains('has-submenu')) {
+        // 切换当前项目的展开状态
+        navItem.classList.toggle('open');
+        
+        // 关闭其他同级菜单
+        const parentNav = navItem.parentElement;
+        if (parentNav.classList.contains('nav-list')) {
+            // 这是顶级菜单
+            document.querySelectorAll('.nav-list > .nav-item.has-submenu').forEach(item => {
+                if (item !== navItem) {
+                    item.classList.remove('open');
+                }
+            });
+        } else {
+            // 这是子菜单
+            parentNav.querySelectorAll('.nav-item.has-submenu').forEach(item => {
+                if (item !== navItem) {
+                    item.classList.remove('open');
+                }
+            });
+        }
+        
+        // 如果点击的是父级菜单项，不切换内容
+        if (clickedLink.querySelector('.submenu-arrow')) {
+            return;
+        }
+    }
     
     // 移除所有活动状态
     document.querySelectorAll('.nav-link').forEach(link => {
@@ -126,11 +156,22 @@ function updatePageTitle(section) {
         'home': '系统概览',
         'lab-intro': '认识实验室',
         'research-platform': '科研平台',
+        'key-labs': '重点实验室',
+        'culture-lab': '文旅重点实验室',
+        'ai-lab': '人工智能与算力技术重点实验室',
+        'committee': '标委会',
         'talent-cultivation': '人才培养',
         'cooperation': '合作交流',
         'faculty': '教师队伍',
+        'research-team': '研究队伍',
+        'academic-committee': '学术委员会',
         'research': '科学研究',
+        'comprehensive-research': '综合研究',
+        'special-research': '专项研究',
         'enrollment': '招生就业',
+        'master-enrollment': '硕士招生',
+        'phd-enrollment': '博士招生',
+        'postdoc-enrollment': '博士后招生',
         'services': '对外服务'
     };
     

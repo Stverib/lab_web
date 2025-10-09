@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统 - 人工智能与算力技术实验室</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- 侧边导航栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-cogs"></i>
+                    <span>管理后台</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" data-section="home">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#lab-intro" class="nav-link" data-section="lab-intro">
+                            <i class="fas fa-info-circle"></i>
+                            <span>认识实验室</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#research-platform" class="nav-link" data-section="research-platform">
+                            <i class="fas fa-microscope"></i>
+                            <span>科研平台</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#talent-cultivation" class="nav-link" data-section="talent-cultivation">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>人才培养</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cooperation" class="nav-link" data-section="cooperation">
+                            <i class="fas fa-handshake"></i>
+                            <span>合作交流</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#faculty" class="nav-link" data-section="faculty">
+                            <i class="fas fa-users"></i>
+                            <span>教师队伍</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#research" class="nav-link" data-section="research">
+                            <i class="fas fa-flask"></i>
+                            <span>科学研究</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#enrollment" class="nav-link" data-section="enrollment">
+                            <i class="fas fa-user-plus"></i>
+                            <span>招生就业</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link" data-section="services">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>对外服务</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 顶部导航栏 -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title">后台管理系统</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span>管理员</span>
+                    </div>
+                    <button class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- 内容区域 -->
+            <div class="content-area">
+                <!-- 首页内容 -->
+                <section id="home-section" class="content-section active">
+                    <div class="dashboard">
+                        <div class="dashboard-header">
+                            <h2>系统概览</h2>
+                            <p>欢迎使用人工智能与算力技术实验室后台管理系统</p>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>新闻动态</h3>
+                                    <p class="stat-number">12</p>
+                                    <p class="stat-label">条记录</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>通知公告</h3>
+                                    <p class="stat-number">8</p>
+                                    <p class="stat-label">条记录</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>学术活动</h3>
+                                    <p class="stat-number">15</p>
+                                    <p class="stat-label">条记录</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h3>团队成员</h3>
+                                    <p class="stat-number">25</p>
+                                    <p class="stat-label">人</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-actions">
+                            <h3>快速操作</h3>
+                            <div class="action-buttons">
+                                <button class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                    <span>添加新闻</span>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-edit"></i>
+                                    <span>编辑公告</span>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-upload"></i>
+                                    <span>上传文件</span>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-cog"></i>
+                                    <span>系统设置</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 认识实验室内容 -->
+                <section id="lab-intro-section" class="content-section">
+                    <div class="section-header">
+                        <h2>认识实验室</h2>
+                        <p>管理实验室介绍、历史沿革、组织架构等信息</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>实验室信息管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加内容
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示实验室介绍相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 科研平台内容 -->
+                <section id="research-platform-section" class="content-section">
+                    <div class="section-header">
+                        <h2>科研平台</h2>
+                        <p>管理重点实验室、标委会等科研平台信息</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>平台信息管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加平台
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示科研平台相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 人才培养内容 -->
+                <section id="talent-cultivation-section" class="content-section">
+                    <div class="section-header">
+                        <h2>人才培养</h2>
+                        <p>管理社团、学生组织等人才培养相关信息</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>人才培养管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加内容
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示人才培养相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 合作交流内容 -->
+                <section id="cooperation-section" class="content-section">
+                    <div class="section-header">
+                        <h2>合作交流</h2>
+                        <p>管理合作项目、交流活动等信息</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>合作交流管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加合作
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示合作交流相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 教师队伍内容 -->
+                <section id="faculty-section" class="content-section">
+                    <div class="section-header">
+                        <h2>教师队伍</h2>
+                        <p>管理教师信息、学术委员会等</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>教师信息管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加教师
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示教师队伍相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 科学研究内容 -->
+                <section id="research-section" class="content-section">
+                    <div class="section-header">
+                        <h2>科学研究</h2>
+                        <p>管理研究项目、论文发表等科研信息</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>科研信息管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加项目
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示科学研究相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 招生就业内容 -->
+                <section id="enrollment-section" class="content-section">
+                    <div class="section-header">
+                        <h2>招生就业</h2>
+                        <p>管理硕士、博士、博士后招生信息</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>招生信息管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加招生信息
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示招生就业相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 对外服务内容 -->
+                <section id="services-section" class="content-section">
+                    <div class="section-header">
+                        <h2>对外服务</h2>
+                        <p>管理对外服务项目、活动信息等</p>
+                    </div>
+                    <div class="management-panel">
+                        <div class="panel-header">
+                            <h3>服务信息管理</h3>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                                添加服务
+                            </button>
+                        </div>
+                        <div class="panel-content">
+                            <p>这里将显示对外服务相关的内容管理功能</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

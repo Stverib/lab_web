@@ -1,0 +1,130 @@
+# ===================================
+# 项目通用忽略文件
+# ===================================
+
+# ===================================
+# Java / Maven / Spring Boot
+# ===================================
+BackEnd/ailab/target/
+BackEnd/ailab/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.ear
+HELP.md
+
+# ===================================
+# Node.js / NPM
+# ===================================
+node_modules/
+FrontEnd/node_modules/
+BackEnd/ailab/src/main/resources/static/node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================================
+# IDE / 编辑器
+# ===================================
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ===================================
+# 操作系统
+# ===================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# ===================================
+# 日志文件
+# ===================================
+*.log
+logs/
+backend.log
+frontend.log
+
+# ===================================
+# 临时文件和备份
+# ===================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.save
+*~
+
+# ===================================
+# 构建输出
+# ===================================
+build/
+dist/
+out/
+target/
+
+# ===================================
+# 数据库和配置（敏感信息）
+# ===================================
+# 如果有本地数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 环境变量配置（如果有的话）
+.env
+.env.local
+.env.*.local
+
+# ===================================
+# 文档说明文件（临时）
+# ===================================
+启动问题和解决方案.md
+快速测试步骤.md
+教师队伍页面动态化说明.md
+紧急修复说明.md
+通知公告功能说明.md
+
+# ===================================
+# 测试和初始化脚本（可选）
+# ===================================
+BackEnd/ailab/init-data.html
+BackEnd/ailab/init-people-data.js
+BackEnd/ailab/src/main/resources/static/init-committee.html
+BackEnd/ailab/src/main/resources/static/init-data.html
+BackEnd/ailab/src/main/resources/static/test-api.html
+BackEnd/ailab/src/main/resources/static/test-new.html
+

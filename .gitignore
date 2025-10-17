@@ -1,0 +1,44 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+~$*
+
+# Node / Frontend
+node_modules/
+**/node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+yarn-error.log
+dist/
+build/
+.parcel-cache/
+.cache/
+.next/
+out/
+
+# Java / Maven / Spring
+target/
+**/target/
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Python (if any tooling scripts)
+__pycache__/
+*.pyc
+
+

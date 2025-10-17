@@ -43,9 +43,9 @@ class CommitteeManager {
             const tr = document.createElement('tr');
             if (idx % 2 === 1) tr.style.backgroundColor = '#f9f9f9';
             tr.innerHTML = `
-                <td style="padding: 15px; text-align: center; width: 8%;">${idx + 1}</td>
-                <td style="padding: 15px; text-align: center; font-weight: bold; width: 15%;">${m.name || ''}</td>
-                <td style="padding: 15px; text-align: center; width: 10%;">${m.gender || ''}</td>
+                <td style="padding: 15px; text-align: center;">${idx + 1}</td>
+                <td style="padding: 15px; text-align: center; font-weight: bold;">${m.name || ''}</td>
+                <td style="padding: 15px; text-align: center;">${m.gender || ''}</td>
                 <td style="padding: 15px; text-align: center;">${m.title || ''}</td>
                 <td style="padding: 15px; text-align: center;">${m.organization || ''}</td>
                 <td style="padding: 15px; text-align: center;">${m.academicPosition || ''}</td>
